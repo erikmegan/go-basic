@@ -23,5 +23,5 @@ func TestVariable(t *testing.T) {
 
 func TestVariableConversionIntToString(t *testing.T) {
 	varname := variableConversionIntToString(1)
-	assert.IsType(t, "erik", varname)
+	assert.Equal(t, "1", varname)
 }
