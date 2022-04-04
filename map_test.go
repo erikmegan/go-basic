@@ -21,9 +21,29 @@ func mapExample() {
 		"name":     "erik",
 		"lastName": "megans",
 	}
-	fmt.Println(person)
-	fmt.Println(person["name"])
-	fmt.Println(person["lastName"])
+	// fmt.Println(person)
+	// fmt.Println(person["name"])
+	// fmt.Println(person["lastName"])
+	delete(person, "name")
+	if person["name"] == "" {
+		fmt.Println("kosong")
+	} else {
+		fmt.Println("isi")
+	}
+}
+
+func TestMapExampleNumber(t *testing.T) {
+	var v map[string]int = map[string]int{
+		"ini": 1,
+		"itu": 2,
+	}
+	fmt.Println(v["ini"])
+	fmt.Println(v)
+	// if v["sini"] == 0 {
+	// 	fmt.Println("kosong")
+	// } else {
+	// 	fmt.Println("isi")
+	// }
 }
 func TestMap(t *testing.T) {
 	mapExample()
